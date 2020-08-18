@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 
 import { Input, Button, InputLabel, Checkbox, FormControlLabel } from '@material-ui/core';
 
+import Meme from '../Meme/Meme';
+
 function MemeCreator() {
 
     const [topText, setTopText] = useState("");
@@ -34,11 +36,9 @@ function MemeCreator() {
         setMemeLink(`https://memegen.link/custom/${t}/${b}.jpg?width=${width}&height=${height}&alt=${imageLink}&watermark=${watermark}`);
     }
 
-    const copyLink = () => navigator.clipboard.writeText(memeLink);
-
     return (
         <div className="meme-creator">
-            <img src={memeLink} alt={memeLink} onClick={copyLink} /><br />
+            <Meme memeLink={memeLink} /><br />
             <InputLabel>Top Text: </InputLabel><Input value={topText} onChange={(e) => setTopText(e.target.value)} /><br />
             <InputLabel>Bottom Text: </InputLabel><Input value={bottomText} onChange={(e) => setBottomText(e.target.value)} /><br />
             <InputLabel>Image URL: </InputLabel><Input type="url" value={imageLink} onChange={(e) => setImageLink(e.target.value)} /><br />
