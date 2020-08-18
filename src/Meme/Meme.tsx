@@ -11,7 +11,7 @@ function Meme(props: Props) {
 
     return (
         <div className="meme">
-            <img src={props.memeLink} /><br />
+            <img src={props.memeLink} alt={""}/><br />
             {props.memeLink === "" ? <Button color="secondary" onClick={copyLink} disabled >Copy Link!</Button> : <Button color="secondary" onClick={copyLink} >Copy Link!</Button>}
         </div>
     )
