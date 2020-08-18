@@ -42,7 +42,7 @@ function MemeCreator() {
             <InputLabel>Top Text: </InputLabel><Input value={topText} onChange={(e) => setTopText(e.target.value)} /><br />
             <InputLabel>Bottom Text: </InputLabel><Input value={bottomText} onChange={(e) => setBottomText(e.target.value)} /><br />
             <InputLabel>Image URL: </InputLabel><Input type="url" value={imageLink} onChange={(e) => setImageLink(e.target.value)} /><br />
-            <Input value={width} onChange={(e) => setWidth(parseInt(e.target.value))} className="width size" /> x <Input value={height} onChange={(e) => setHeight(parseInt(e.target.value))} className="height size" /><br /><br />
+            <Input type="number" value={width} onChange={(e) => setWidth(parseInt(e.target.value))}/> x <Input value={height} onChange={(e) => setHeight(parseInt(e.target.value))} type="number" /><br /><br />
             <FormControlLabel control={<Checkbox name="Watermark" onChange={(e) => setWatermark(e.target.checked)} checked={watermark} />} label="Watermark" /><br />
             <Button variant="contained" color="primary" onClick={createMeme}>Create Meme!</Button>
         </div>
