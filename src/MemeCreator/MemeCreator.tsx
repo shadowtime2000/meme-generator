@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import 'bootstrap/dist/css/bootstrap.min.css';
+import { Input, Button, InputLabel } from '@material-ui/core';
 
 function MemeCreator() {
 
@@ -35,13 +35,13 @@ function MemeCreator() {
     const copyLink = () => navigator.clipboard.writeText(memeLink);
 
     return (
-        <div className="meme-creator container">
+        <div className="meme-creator">
             <img src={memeLink} alt={memeLink} onClick={copyLink} /><br />
-            <label>Top Text: </label><input className="top-text form-control" value={topText} onChange={(e) => setTopText(e.target.value)} /><br />
-            <label>Bottom Text: </label><input className="bottom-text form-control" value={bottomText} onChange={(e) => setBottomText(e.target.value)} /><br />
-            <label>Image URL: </label><input className="image-link form-control" value={imageLink} onChange={(e) => setImageLink(e.target.value)} /><br />
-            <button className="create-meme btn btn-primary" onClick={createMeme}>Create Meme!</button><br />
-            <label>Size: </label><input value={width} onChange={(e) => setWidth(parseInt(e.target.value))} className="width size form-control" /> x <input value={height} onChange={(e) => setHeight(parseInt(e.target.value))} className="height size form-control" />
+            <InputLabel>Top Text: </InputLabel><Input value={topText} onChange={(e) => setTopText(e.target.value)} /><br />
+            <InputLabel>Bottom Text: </InputLabel><Input value={bottomText} onChange={(e) => setBottomText(e.target.value)} /><br />
+            <InputLabel>Image URL: </InputLabel><Input type="url" value={imageLink} onChange={(e) => setImageLink(e.target.value)} /><br />
+            <Input value={width} onChange={(e) => setWidth(parseInt(e.target.value))} className="width size" /> x <Input value={height} onChange={(e) => setHeight(parseInt(e.target.value))} className="height size" /><br /><br />
+            <Button variant="contained" color="primary" onClick={createMeme}>Create Meme!</Button>
         </div>
     )
 }
