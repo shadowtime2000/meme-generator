@@ -1,5 +1,9 @@
 import React, { memo } from 'react';
 
+import 'fontsource-roboto';
+
+import { Typography } from '@material-ui/core';
+
 type Props = {
     head: string
 }
@@ -7,8 +11,10 @@ type Props = {
 function Header(props: Props) {
     return (
         <div className="header">
-            <h1>{props.head}</h1>
-        </div>    
+            <Typography variant="h3" component="h4">
+                Meme Generator
+            </Typography>
+        </div>
     )
 }
 
