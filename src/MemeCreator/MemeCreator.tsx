@@ -43,7 +43,7 @@ function MemeCreator() {
             <InputLabel>Bottom Text: </InputLabel><Input value={bottomText} onChange={(e) => setBottomText(e.target.value)} /><br />
             <InputLabel>Image URL: </InputLabel><Input type="url" value={imageLink} onChange={(e) => setImageLink(e.target.value)} /> or 
             <InputLabel>Select Meme</InputLabel>
-            <Select onChange={(e) => setImageLink(e.target.value as string)}>
+            <Select style={{minWidth: 200}} onChange={(e) => setImageLink(e.target.value as string)}>
                 <MenuItem value={"https://memegen.link/buzz/"}>Buzz Lightyear</MenuItem>
                 <MenuItem value={"https://memegen.link/afraid/"}>Afraid To Ask Andy</MenuItem>
                 <MenuItem value={"https://memegen.link/trump/"}>Donald Trump</MenuItem>
