@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import { Input, Button, InputLabel, Checkbox, FormControlLabel, MenuItem, Select } from '@material-ui/core';
+import { Input, Button, InputLabel, Checkbox, FormControlLabel, MenuItem, Select, Grid } from '@material-ui/core';
 
 import Meme from '../Meme/Meme';
 
@@ -37,28 +37,53 @@ function MemeCreator() {
     }
 
     return (
-        <div className="meme-creator">
-            <Meme memeLink={memeLink} /><br />
-            <InputLabel>Top Text: </InputLabel><Input value={topText} onChange={(e) => setTopText(e.target.value)} /><br />
-            <InputLabel>Bottom Text: </InputLabel><Input value={bottomText} onChange={(e) => setBottomText(e.target.value)} /><br />
-            <InputLabel>Image URL: </InputLabel><Input type="url" value={imageLink} onChange={(e) => setImageLink(e.target.value)} /> or 
-            <InputLabel>Select Meme</InputLabel>
-            <Select style={{minWidth: 200}} onChange={(e) => setImageLink(e.target.value as string)}>
-                <MenuItem value={"https://memegen.link/buzz/"}>Buzz Lightyear</MenuItem>
-                <MenuItem value={"https://memegen.link/afraid/"}>Afraid To Ask Andy</MenuItem>
-                <MenuItem value={"https://memegen.link/trump/"}>Donald Trump</MenuItem>
-                <MenuItem value={"https://memegen.link/spongebob/"}>Spongebob Squarepants</MenuItem>
-                <MenuItem value={"https://memegen.link/tenguy/"}>Ten Guy</MenuItem>
-                <MenuItem value={"https://memegen.link/sad-biden/"}>Sad Joe Biden</MenuItem>
-                <MenuItem value={"https://memegen.link/sad-boehner/"}>Sad John Boehner</MenuItem>
-                <MenuItem value={"https://memegen.link/sad-clinton/"}>Sad Bill Clinton</MenuItem>
-                <MenuItem value={"https://memegen.link/sad-obama/"}>Sad Barack Obama</MenuItem>
-                <MenuItem value={"https://memegen.link/patrick/"}>Patrick Star</MenuItem>
-            </Select><br />
-            <Input type="number" value={width} onChange={(e) => setWidth(parseInt(e.target.value))}/> x <Input value={height} onChange={(e) => setHeight(parseInt(e.target.value))} type="number" /><br /><br />
-            <FormControlLabel control={<Checkbox name="Watermark" onChange={(e) => setWatermark(e.target.checked)} checked={watermark} />} label="Watermark" /><br />
-            <Button variant="contained" color="primary" onClick={createMeme}>Create Meme!</Button>
-        </div>
+        <Grid container spacing={3} className="meme-creator">
+            <Grid item lg={12} xs={12}>
+                <Meme memeLink={memeLink} /><br />
+            </Grid>
+            <Grid item lg={3} xs={undefined}></Grid>
+            <Grid item lg={3} xs={12}>
+                <InputLabel>Top Text: </InputLabel><Input value={topText} onChange={(e) => setTopText(e.target.value)} /><br />
+            </Grid>
+            <Grid item lg={3} xs={12}>
+                <InputLabel>Bottom Text: </InputLabel><Input value={bottomText} onChange={(e) => setBottomText(e.target.value)} /><br />
+            </Grid>
+            <Grid item lg={3} xs={undefined}></Grid>
+            <Grid item lg={3} xs={undefined}></Grid>
+            <Grid item lg={3} xs={12}>
+                <InputLabel>Image URL: </InputLabel><Input type="url" value={imageLink} onChange={(e) => setImageLink(e.target.value)} />
+            </Grid>
+            <Grid item lg={3} xs={12}>
+                <InputLabel>Select Meme</InputLabel>
+                <Select style={{minWidth: 200}} onChange={(e) => setImageLink(e.target.value as string)}>
+                    <MenuItem value={"https://memegen.link/buzz/"}>Buzz Lightyear</MenuItem>
+                    <MenuItem value={"https://memegen.link/afraid/"}>Afraid To Ask Andy</MenuItem>
+                    <MenuItem value={"https://memegen.link/trump/"}>Donald Trump</MenuItem>
+                    <MenuItem value={"https://memegen.link/spongebob/"}>Spongebob Squarepants</MenuItem>
+                    <MenuItem value={"https://memegen.link/tenguy/"}>Ten Guy</MenuItem>
+                    <MenuItem value={"https://memegen.link/sad-biden/"}>Sad Joe Biden</MenuItem>
+                    <MenuItem value={"https://memegen.link/sad-boehner/"}>Sad John Boehner</MenuItem>
+                    <MenuItem value={"https://memegen.link/sad-clinton/"}>Sad Bill Clinton</MenuItem>
+                    <MenuItem value={"https://memegen.link/sad-obama/"}>Sad Barack Obama</MenuItem>
+                    <MenuItem value={"https://memegen.link/patrick/"}>Patrick Star</MenuItem>
+                </Select><br />
+            </Grid>
+            <Grid item lg={3} xs={undefined}></Grid>
+            <Grid item lg={3} xs={undefined}></Grid>
+            <Grid item lg={3} xs={12}>
+                <InputLabel>Width</InputLabel><Input type="number" value={width} onChange={(e) => setWidth(parseInt(e.target.value))} />
+            </Grid>
+            <Grid item lg={3} xs={12}>
+                <InputLabel>Height</InputLabel><Input type="number" value={height} onChange={(e) => setHeight(parseInt(e.target.value))} />
+            </Grid>
+            <Grid item lg={3} xs={undefined}></Grid>
+            <Grid item lg={12} xs={12}>
+                <FormControlLabel control={<Checkbox name="Watermark" onChange={(e) => setWatermark(e.target.checked)} checked={watermark} />} label="Watermark" /><br />
+            </Grid>
+            <Grid item lg={12} xs={12}>
+                <Button variant="contained" color="primary" onClick={createMeme}>Create Meme!</Button>
+            </Grid>
+        </Grid>
     )
 }
 
