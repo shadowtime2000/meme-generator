@@ -1,6 +1,7 @@
 import React, { memo } from 'react';
 
-import { Typography, Link } from '@material-ui/core';
+import Typography from '@material-ui/core/Typography/Typography';
+import Link from '@material-ui/core/Link/Link';
 
 type Props = {
     link: string,

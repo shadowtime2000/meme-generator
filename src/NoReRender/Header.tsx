@@ -2,7 +2,7 @@ import React, { memo } from 'react';
 
 import 'fontsource-roboto';
 
-import { Typography } from '@material-ui/core';
+import Typography from '@material-ui/core/Typography/Typography';
 
 type Props = {
     head: string

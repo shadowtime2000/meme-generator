@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 
-import { Button, Menu, MenuItem } from '@material-ui/core';
+import Button from '@material-ui/core/Button/Button';
+import Menu from '@material-ui/core/Menu/Menu';
+import MenuItem from '@material-ui/core/MenuItem/MenuItem';
 
 import Share from '@material-ui/icons/Share';
 import EmailIcon from '@material-ui/icons/Email';
