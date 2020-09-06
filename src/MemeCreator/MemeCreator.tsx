@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import loadable from '@loadable/component';
 
 import Input from '@material-ui/core/Input/Input';
 import Button from '@material-ui/core/Button/Button';
@@ -9,7 +10,7 @@ import MenuItem from '@material-ui/core/MenuItem/MenuItem';
 import Select from '@material-ui/core/Select/Select';
 import Grid from '@material-ui/core/Grid/Grid';
 
-import Meme from '../Meme/Meme';
+const Meme = loadable(() => import("../Meme/Meme"));
 
 function MemeCreator() {
 
