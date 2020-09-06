@@ -4,8 +4,6 @@ import loadable from '@loadable/component';
 import Input from '@material-ui/core/Input/Input';
 import Button from '@material-ui/core/Button/Button';
 import InputLabel from '@material-ui/core/InputLabel/InputLabel';
-import Checkbox from '@material-ui/core/Checkbox/Checkbox';
-import FormControlLabel from '@material-ui/core/FormControlLabel/FormControlLabel';
 import MenuItem from '@material-ui/core/MenuItem/MenuItem';
 import Select from '@material-ui/core/Select/Select';
 import Grid from '@material-ui/core/Grid/Grid';
