@@ -22,8 +22,6 @@ function MemeCreator() {
     const [width, setWidth] = useState(640);
     const [height, setHeight] = useState(320);
 
-    const [watermark, setWatermark] = useState(true);
-
     const filterText = (text: string) => {
         let newString = text;
         newString = newString.replace("_", "__");
