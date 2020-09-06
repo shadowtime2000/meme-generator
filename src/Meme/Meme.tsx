@@ -1,7 +1,7 @@
 import React from 'react';
 import loadable from '@loadable/component';
 
-const ShareButton = loadable(() => import("../ShareButton/ShareButton"));
+const ShareButton = loadable(() => import( /* webpackChunkName: "sharebutton" */ "../ShareButton/ShareButton"));
 
 type Props = {
     memeLink: string
