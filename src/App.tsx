@@ -18,10 +18,6 @@ function App() {
   window.addEventListener("online", () => setInternet(true));
   window.addEventListener("offline", () => setInternet(false));
 
-  useEffect(() => {
-    setInternet(window.navigator.onLine);
-  }, []);
-
   if (internet) {return (
     <div className="App">
       <Grid container spacing={3}>
