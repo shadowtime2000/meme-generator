@@ -39,7 +39,7 @@ function MemeCreator() {
         if (topText === "" || bottomText === "" || imageLink === "") return;
         const t = filterText(topText);
         const b = filterText(bottomText);
-        setMemeLink(`https://memegen.link/custom/${t}/${b}.jpg?alt=${encodeURIComponent(imageLink)}&width=${width}&height=${height}&watermark=${watermark}`);
+        setMemeLink(`https://memegen.link/custom/${t}/${b}.jpg?alt=${encodeURIComponent(imageLink)}&width=${width}&height=${height}`);
     }
 
     return (
