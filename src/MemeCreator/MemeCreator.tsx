@@ -8,7 +8,7 @@ import MenuItem from '@material-ui/core/MenuItem/MenuItem';
 import Select from '@material-ui/core/Select/Select';
 import Grid from '@material-ui/core/Grid/Grid';
 
-const Meme = loadable(() => import( /* webpackChunkName: "meme" */ "../Meme/Meme"));
+const Meme = loadable(() => import("../Meme/Meme"));
 
 function MemeCreator() {
 
