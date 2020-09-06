@@ -1,5 +1,4 @@
 import React from 'react';
-import loadable from '@loadable/component';
 
 import ShareButton from '../ShareButton/ShareButton';
 
