@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import loadable from '@loadable/component';
 
 import Grid from '@material-ui/core/Grid/Grid';
