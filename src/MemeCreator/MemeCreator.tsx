@@ -86,9 +86,6 @@ function MemeCreator() {
             </Grid>
             <Grid item lg={3} xs={undefined}></Grid>
             <Grid item lg={12} xs={12}>
-                <FormControlLabel control={<Checkbox name="Watermark" onChange={(e) => setWatermark(e.target.checked)} checked={watermark} />} label="Watermark" /><br />
-            </Grid>
-            <Grid item lg={12} xs={12}>
                 <Button variant="contained" color="primary" onClick={createMeme}>Create Meme!</Button>
             </Grid>
         </Grid>
