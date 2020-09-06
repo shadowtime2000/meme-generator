@@ -6,10 +6,10 @@ import Grid from '@material-ui/core/Grid/Grid';
 import './App.css';
 
 import Header from './NoReRender/Header';
-import Footer from './NoReRender/Footer';
 import MemeCreator from './MemeCreator/MemeCreator';
 
 const Badges = loadable(() => import("./Badges/Badges"));
+const Footer = loadable(() => import("./NoReRender/Footer"));
 
 function App() {
   return (
