@@ -8,8 +8,8 @@ import './App.css';
 import Header from './NoReRender/Header';
 import MemeCreator from './MemeCreator/MemeCreator';
 
-const Badges = loadable(() => import("./Badges/Badges"));
-const Footer = loadable(() => import("./NoReRender/Footer"));
+const Badges = loadable(() => import( /* webpackChunkName: "badges" */ "./Badges/Badges"));
+const Footer = loadable(() => import( /* webpackChunkName: "footer" */ "./NoReRender/Footer"));
 
 function App() {
   return (
