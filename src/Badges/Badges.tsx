@@ -1,7 +1,5 @@
 import React from 'react';
 
-import {} from '@material-ui/core';
-
 function Badges() {
     return (
         <div className="badges">

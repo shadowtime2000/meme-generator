@@ -5,11 +5,11 @@ import Grid from '@material-ui/core/Grid/Grid';
 
 import './App.css';
 
-const Header = loadable(() => import("./NoReRender/Header"));
-const Footer = loadable(() => import("./NoReRender/Footer"));
-const MemeCreator = loadable(() => import("./MemeCreator/MemeCreator"));
-const Badges = loadable(() => import("./Badges/Badges"));
+import Header from './NoReRender/Header';
+import Footer from './NoReRender/Footer';
+import MemeCreator from './MemeCreator/MemeCreator';
 
+const Badges = loadable(() => import("./Badges/Badges"));
 
 function App() {
   return (
