@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import loadable from '@loadable/component';
 
 import Grid from '@material-ui/core/Grid/Grid';
@@ -12,7 +12,17 @@ const Badges = loadable(() => import("./Badges/Badges"));
 const Footer = loadable(() => import("./NoReRender/Footer"));
 
 function App() {
-  return (
+
+  const [internet, setInternet] = useState(false);
+
+  window.addEventListener("online", () => setInternet(true));
+  window.addEventListener("offline", () => setInternet(false));
+
+  useEffect(() => {
+    setInternet(window.navigator.onLine);
+  }, []);
+
+  if (internet) {return (
     <div className="App">
       <Grid container spacing={3}>
         <Grid item xs={12}>
@@ -27,7 +37,9 @@ function App() {
         </Grid>
       </Grid>
     </div>
-  );
+  )}
+  
+  else {return (<div>You need internet to use this app</div>)}
 }
 
 export default App;
