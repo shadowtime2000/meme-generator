@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import loadable from '@loadable/component';
 
 import Grid from '@material-ui/core/Grid/Grid';
@@ -17,6 +17,10 @@ function App() {
 
   window.addEventListener("online", () => setInternet(true));
   window.addEventListener("offline", () => setInternet(false));
+
+  useEffect(() => {
+    setInternet(window.navigator.onLine)
+  })
 
   if (internet) {return (
     <div className="App">
