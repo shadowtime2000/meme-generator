@@ -20,7 +20,7 @@ function App() {
 
   useEffect(() => {
     setInternet(window.navigator.onLine)
-  })
+  }, [])
 
   if (internet) {return (
     <div className="App">
